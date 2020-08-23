@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="DialogApp.MainPage">
+
+    <StackLayout Padding="10" BackgroundColor="Black">
+        <Label Text="Text pro přečtení:" TextColor="Yellow"/>
+        <Entry x:Name="sayText" BackgroundColor="Beige"/>
+        <Label Text="Výška hlasu:" TextColor="Yellow"/>
+        <Slider x:Name="pitch" Maximum="2" Minimum="0.1" Value="1"/>
+        <Label Text="Hlasitost:" TextColor="Yellow"/>
+        <Slider x:Name="volume" Value="0.5"/>
+        <Button x:Name="read" Text="Přečíst text" IsEnabled="{Binding Path=CanRead}"/>
+        <Button x:Name="cancel" Text="Zrušit čtení"/>
+    </StackLayout>
+
+</ContentPage>
